@@ -1,0 +1,139 @@
+.pop-up {
+    position: fixed;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-color: $blackout;
+    z-index: 990;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateZ(100%);
+    transition: all 1s ease;
+    @include flex;
+    &.visible {
+        transform: translateZ(0);
+        visibility: visible;
+        opacity: 1;
+        cursor: pointer;
+    }
+
+}
+
+
+.pop-up__window{          
+    position: relative;       
+    border-radius: 35px;
+}
+
+.pop-up__card{
+    background-color: white;
+    border-radius: 9px;
+    
+}
+
+.pop-up__card--flex{
+    @include flex($justify: space-between);
+}
+
+.pop-up__content {
+    color: $color-black;
+    .wrapper{
+        padding: 50px 20px 88px 29px;
+        @include media-tablet{
+            padding: 10px 9px 37px 11px;
+        }
+        @include media-mobile{
+            padding: 10px;
+        }
+    }
+}
+
+
+.pop-up__text--flex{
+    @include flex(column, start);
+}
+
+.pop-up__list--flex{
+    @include flex(column, start);
+}
+
+.pop-up__close {
+    position: absolute;
+    display: block;
+    right: -57px;
+    top: -57px;
+    border: 2px solid $color-primary;
+    border-radius: 100px;
+    width: 52px;
+    height: 52px;
+    background-image: url("../assets/icons/close.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    transition: 0.5s ease-in-out;
+    &:hover{
+        background-color: transparent;
+    }
+    &.hover {
+        transition: 0.5s ease-in-out;
+        background-color: $color-primary;
+    }
+    
+}
+
+.pop-up__photo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    border-radius: 9px 0 0 9px;
+    @include media-tablet{
+        width: 350px;
+        height: 350px;
+    }
+    @include media-mobile{
+        display: none;
+    }
+}
+
+.pop-up__name {
+    color: $color-black;
+    margin-bottom: 10px;
+}
+.pop-up__breed {
+    color: $color-black;
+    margin-bottom: 40px;
+    @include media-tablet{
+        margin-bottom: 20px;
+    }
+}
+.pop-up__description{
+    width: 350px;
+    
+    color: $color-black;
+    margin-bottom: 40px;
+    @include media-tablet{
+        width: 260px;
+        margin-bottom: 20px;
+    }
+}
+.pop-up__list {
+    padding: 0;
+    margin: 0 0 0 29px;
+    @include media-tablet{
+        margin-bottom: 11px;
+        width: 260px;
+    }
+
+    li {
+        color: $color-primary;
+        span {
+            color: $color-black;
+        }
+    }
+}
+.pop-up__item {
+    color: $color-black;
+}

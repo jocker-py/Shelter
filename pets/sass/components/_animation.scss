@@ -1,0 +1,56 @@
+/* Animation Start */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes burgerRotateOpen {
+    from{
+        @include transform(rotate(0deg));
+    }
+    50%{
+        @include transform(scale(0.5));
+        
+    }
+    to{
+        @include transform(rotate(-90deg));
+    }
+}
+
+@keyframes burgerRotateClose {
+    from{
+        @include transform(rotate(-90deg));
+    }
+    50%{
+        @include transform(scale(0.5));
+        
+    }
+    to{
+        @include transform(rotate(0deg));
+    }
+}
+
+@keyframes openMenuTransform{
+    from{
+        @include transform(translateX(320px));
+    }
+    50%{
+        @include transform(translateX(-15px));
+    }
+    to{@include transform(translateX(0));}
+}
+
+@keyframes closeMenuTransform{
+    from{
+        @include transform(translateX(0px));
+    }
+    
+    to{@include transform(translateX(320px));}
+}
+
+
+/* Animation End */

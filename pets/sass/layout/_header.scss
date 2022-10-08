@@ -1,0 +1,88 @@
+/*Header START*/
+
+.header {
+    position: sticky;
+    right: 0;
+    top: 0;
+    background-color: $color-light-xl;
+    z-index: 2;
+    .wrapper { 
+        padding: 30px 30px 29px 37px;
+        @include media-tablet(800px) {
+            @include wrapper-tablet(30px 20px 30px 27px);
+        }
+        @include media-mobile {
+            padding: 30px 53px 30px 7px;
+    }
+}
+}
+
+.header__wrapper--flex-row {
+    @include flex(row, center, space-between);
+    column-gap: 36px;
+    font-weight: 300;
+    @include media-mobile{
+        column-gap: 20px;
+    }
+}
+
+.header__logo {
+    .header__link {
+        width: 186px;
+        @include flex(column, center, center);
+        row-gap: 7px;
+        text-decoration: none;
+
+        .header__title {
+            width: 100%;
+            @include font(32, 35);
+            color: $color-dark-l;
+            letter-spacing: 0.06em;
+            &:hover{
+                color: $color-dark-3xl;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.324));
+            }
+            @include media-mobile {
+                padding: 0;
+            }
+        }
+
+        .header__subtitle {
+            @include font(14, 16);
+            font-family: $Arial;
+            width: 100%;
+            color: $color-dark-3xl;
+            letter-spacing: 0.06em;
+            margin: 0 0 0 7px;
+            @include media-tablet(800px){
+                margin: 1px 0 0 8px;
+            }
+            @include media-mobile {
+                padding: 0;
+                margin: 2px 0 0 8px;
+            }
+            &:hover{
+                color: $color-dark-3xl;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.324));
+            }
+        }
+    }
+}
+
+.blackout {
+    visibility: hidden;
+    &.visible {
+        visibility: visible;
+    z-index: 2;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: $blackout;
+    }
+    
+}
+
+/*Header END*/

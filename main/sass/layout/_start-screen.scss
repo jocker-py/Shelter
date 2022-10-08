@@ -1,0 +1,121 @@
+/*Main Start*/
+
+/*Section Start-Screen Start*/
+.start-screen {
+    width: 100%;
+    background: $start-screen-gradient-background;
+    .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 180px 40px 0;
+
+
+        @include media-tablet(1240px) {
+            max-width: 708px;
+            padding: 152px 10% 0 9.9%;
+        }
+        @include media-tablet(730px){
+            padding: 150px 2.0% 0 2.0%;
+        }
+        @include media-mobile {
+            padding: 150px 10px 0;
+        }
+    }
+
+    .content {
+        padding-top: 164px;
+        max-width: 460px;
+        text-align: start;
+        @include media-tablet(1240px) {
+            padding: 0 54px 100px 55px;
+        }
+
+        @include media-mobile(720px){
+            text-align: center;
+        }
+        @include media-mobile {
+            padding: 0;
+        }
+    }
+}
+
+.start-screen__content-flex {
+    @include flex($align: flex-start, $justify: space-between);
+    flex-wrap: wrap;
+
+    @include media-tablet {
+        @include flex(column);
+    }
+    @include media-mobile {
+        row-gap: 105px;
+    }
+}
+
+.start-screen__heading {
+    @include font(44, 57, $padding: 0 0 26px);
+    color: $color-light-l;
+    max-width: 310px;
+    @include media-tablet {
+        padding: 0 0 42px;
+    }
+    @include media-tablet(720px) {
+        margin: 0 auto;
+    }
+    @include media-tablet(600px) {
+        @include font(25, 32, $padding: 0 0 42px);
+        max-width: 236px;
+        letter-spacing: 0.06em;
+        margin: 0 auto;
+    }
+}
+
+.start-screen__subheading {
+    color: $color-dark-s;
+    padding-bottom: 27px;
+    width: 100%;
+
+    @include media-tablet {
+        @include font(15, 24, $padding: 0 0 42px);
+        font-family: $Arial;
+        margin: 0;
+        letter-spacing: 0.001em;
+    }
+}
+
+.start-screen__puppy {
+    background-image: url("../assets/images/start-screen-puppy.png");
+    background-repeat: no-repeat;
+    width: 698px;
+    height: 728px;
+    @include media-tablet(870px) {
+        position: relative;
+        right: -70px;
+        bottom: 0;
+        background-image: url("../assets/images/screen-768/start-screen-puppy-768.png");
+        background-repeat: no-repeat;
+        width: 569px;
+        height: 593px;
+    }
+
+    @include media-mobile(720px) {
+        position: relative;
+        bottom: 0;
+        right: -20px;
+        background-image: url("../assets/images/screen-320/start-screen-puppy-320.png");
+        background-repeat: no-repeat;
+        width: 260px;
+        height: 271.77px;
+    }
+}
+
+.start-screen__button {
+    @include media-tablet(1240px) {
+        margin-left: 27.4%;
+    }
+
+    @include media-mobile(720px) {
+        margin: 0 auto;
+    }
+}
+
+/*Section Start-Screen End*/

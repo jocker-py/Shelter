@@ -1,0 +1,65 @@
+
+/*Slider Start*/
+
+.slider__card {
+    border-radius: 9px;
+    background-color: $color-light-s;
+    @extend %transition;
+    &.slider__card--flex {
+        @include flex(column);
+        row-gap: 22px;
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: $color-light-xl;
+        box-shadow: 0px 1px 15px 1px $color-dark-s;
+        .card__button {
+            background-color: $color-primary-light;
+            border-color: $color-primary-light;
+        }
+    }
+
+    .card__name {
+        padding-left: 1px;
+        font-weight: 300;
+        margin-bottom: 8px;
+        @include media-mobile{
+            margin-bottom: 4px;
+        }
+    }
+}
+
+.slider__wrapper {
+    width: 1200px;
+    overflow-x: hidden;
+    @include media-tablet(1279px){
+        width: 580px;
+    }
+    @include media-mobile(767px){
+        width: 270px;
+    }
+}
+
+.slider__page--grid {
+    @include grid-area(2, 4, 31px, 40px);
+
+    @include media-tablet(1279px){
+        @include grid-area (3, 2, 31px, 40px);
+        margin-bottom: 10px;
+    }
+
+
+    @include media-mobile(767px) {
+        @include grid-area (3, 1, 31px, 0);
+        margin-bottom: 0;
+    }
+}
+
+.slider {
+    z-index: 1;
+    left: 0%;
+    position: relative;
+    transition: all 2s;
+}
+
+/*Slider End*/
