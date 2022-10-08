@@ -1,0 +1,45 @@
+/*Base START*/
+
+html {
+    scroll-behavior: smooth;
+    max-width: 1280px;
+    margin: 0 auto;
+    font-size: 10px;
+}
+
+body {
+    @include font(15, 24, normal, $Arial);
+    animation: fadeIn 3s;
+    display: flex;
+    flex-direction: column;
+    background-color: $footer-gradient-background;
+    margin: 0 auto;
+    color: $color-light-s;
+    overflow-x: hidden;
+    &.visible {
+        overflow: hidden;
+    }
+}
+
+h3 {
+    @include font(35, 45);
+    text-align: center;
+    color: $color-dark-l;
+    letter-spacing: 0.06em;
+}
+
+h4 {
+    @include font(20, 23);
+    text-align: center;
+    color: $color-dark-l;
+    letter-spacing: 0.06em;
+}
+
+h5 {
+    @include font(15, 17);
+    text-align: start;
+    color: $color-dark-l;
+    letter-spacing: 0.06em;
+}
+
+/*Base End*/

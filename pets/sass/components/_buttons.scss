@@ -1,0 +1,88 @@
+
+/*Buttons Start*/
+button {
+    @include font(17, 22);
+    letter-spacing: 0.06em;
+    color: $color-dark-3xl;
+    border-radius: 100px;
+    width: 207px;
+    height: 52px;
+    @extend %transition;
+    border: 2px solid $color-primary;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    &:hover{
+        background-color: $color-primary-light;
+        border-color: $color-primary-light;
+        cursor: pointer;
+    }
+}
+
+.button--secondary {
+    width: 187px;
+    background-color: $color-light-l;
+    margin-bottom: 30px;
+}
+
+.button__paginator {
+    width: 52px;
+    height: 52px;
+    background-color: $color-light-l;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &.button__paginator--active {
+        &.button__paginator--left {
+            background-image: url("../assets/icons/left-active.png");
+        }
+
+        &.button__paginator--double-left {
+            background-image: url("../assets/icons/double-left-active.png");
+        }
+
+        &.button__paginator--right {
+            background-image: url("../assets/icons/right-active.png");
+        }
+
+        &.button__paginator--double-right {
+            background-image: url("../assets/icons/double-right-active.png");
+        }
+    }
+
+    &.button__paginator--inactive {
+        background-color: $color-light-l;
+        border: 2px solid $color-dark-s;
+        cursor: auto;
+        &.button__paginator--left {
+            background-image: url("../assets/icons/left-inactive.png");
+        }
+
+        &.button__paginator--double-left {
+            background-image: url("../assets/icons/double-left-inactive.png");
+        }
+
+        &.button__paginator--right {
+            background-image: url("../assets/icons/right-inactive.png");
+        }
+
+        &.button__paginator--double-right {
+            background-image: url("../assets/icons/double-right-inactive.png");
+        }
+
+        &:hover {
+            background-color: $color-light-l;
+            border: 2px solid $color-dark-s;
+        }
+    }
+}
+
+.button__paginator--page {
+    background-color: $color-primary;
+    &:hover, &:focus, &::after {
+        background-color: $color-primary;
+        border-color: $color-primary;
+    }
+
+
+}
+
+/*Buttons End*/

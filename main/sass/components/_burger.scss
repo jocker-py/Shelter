@@ -1,0 +1,49 @@
+/*Burger Start*/
+.burger {
+    display: none;
+    @include media-mobile   {
+        display: block;
+    }
+    width: 30px;
+    height: 24px;
+    position: relative;
+    z-index: 999;
+    cursor: pointer;
+    .burger__line {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 2px;
+        background-color: $color-primary;
+        content: '';
+        &:first-child{
+            top:auto;
+            bottom:0;
+        }
+        &:last-child{
+            top: 2px;
+        }
+    }
+
+    &:hover {
+        .burger__line{
+            background-color: $color-primary-light;
+            @include transform(scale(1.1));
+        }
+    }
+
+    &.burger--open{
+        animation: burgerRotateOpen 1s;
+        @include transform(rotate(-90deg));
+        
+    }
+
+    &.burger--close{
+        animation: burgerRotateClose 1s;
+        @include transform(rotate(0deg));
+        
+    }
+    
+}
+/*Burger End*/

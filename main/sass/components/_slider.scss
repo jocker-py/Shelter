@@ -1,0 +1,37 @@
+/*Slider Start*/
+.slider__wrapper {
+    width: 990px;
+    overflow: hidden;
+    @include media-tablet{
+        width: 580px;
+    }
+    @include media-mobile{
+        width: 270px;
+    }
+}
+
+.slider__bar {
+    position: relative;
+    left: 0;
+    @include media-tablet{
+        left: 0;
+    }
+}
+
+.slider__bar {
+    @include flex();
+    flex-wrap: nowrap;
+}
+
+.slider__item {
+    @include flex();
+    flex-wrap: nowrap;
+    column-gap: 90px;
+    @include media-tablet{
+        column-gap: 40px;
+    }
+    @include media-mobile{
+        column-gap: 0;
+    }
+}
+/*Slider End*/

@@ -1,0 +1,58 @@
+/*Section Help Start*/
+
+.help .wrapper {
+    padding: 80px 40px 100px;
+    @include media-tablet(1279px) {
+        padding: 80px 69px 100px;
+    }
+
+    @include media-mobile{
+        padding: 40px 15px 43px;
+    }
+}
+
+.help__heading {
+    margin: 0 auto;
+    width: 310px;
+    @include media-mobile{
+        width: auto;
+        @include font(25, 32);
+    }
+}
+
+.help__list--flex {
+    padding: 60px 87px 0;
+    @include flex();
+    column-gap: 119px;
+    row-gap: 55px;
+    @include media-tablet(1279px){
+        gap: 55px 80px; 
+    }
+    @include media-tablet(1180px){
+        gap: 55px 60px;
+    }
+    @include media-tablet(951px) {
+        padding: 60px 0 0 0;
+        @include grid-area(3, 3, 55px, 60px);
+    }
+
+    @include media-mobile {
+        padding: 42px 0 0;
+        @include grid-area(5, 2, 30px, 30px);
+    }
+}
+
+.help__item--flex {
+    @include flex(column);
+    gap: 30px;
+    @include media-mobile {
+        gap: 20px;
+        justify-content: space-between;
+    }
+}
+.help__text {
+    @include media-mobile {
+        @include font(15,17);
+    }
+}
+/*Section Help End*/
