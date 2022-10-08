@@ -1,0 +1,140 @@
+/*Section Donation Start*/
+
+.donation {
+    background-color: $color-light-l;
+}
+.donation .wrapper {
+    padding: 72px 180px 100px;
+    
+    @include media-tablet(1279px) {
+        padding: 74px 10px 100px;
+    }
+
+    @include media-mobile{
+        padding: 35px 10px 43px;
+    }
+}
+
+.donation__content--flex {
+    @include flex($align: center);
+    column-gap: 30px;
+
+    @include media-tablet(930px) {
+        flex-direction: column-reverse;
+        gap: 60px;
+    }
+
+    @include media-mobile{
+        gap: 40px;
+    }
+}
+
+.donation__photo {
+    padding: 0;
+    margin-top: 10px;
+    width: 505px;
+    height: 261px;
+    background-image: url('../assets/images/donation-dog.png');
+    background-repeat: no-repeat;
+    @include media-tablet{
+        margin: 0;
+    }
+    @include media-mobile{
+        background-image: url('../assets/images/screen-320/donation-dog-320.png');
+    background-repeat: no-repeat;
+    width: 260px;
+    height: 135.2px;
+    }
+
+    
+}
+.content__donation {
+    width: 380px;
+    @include media-mobile{
+        width: auto;
+    }
+}
+.content__donation--flex {
+    margin-top: 8px;
+    @include flex(column, flex-start);
+    row-gap: 20px;
+    @include media-tablet {
+        margin-top: 6px;
+    }
+}
+.donation__heading {
+    text-align: start;
+    
+    @include media-mobile{
+        
+        @include font(25, 32);
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+.donation__subheading {
+    @include media-mobile{
+        @include font(15,24);
+        letter-spacing: 0.00001em;
+        margin: 0 auto;
+    }
+}
+
+.creadit-card__wrapper {
+    width: 320px;
+    padding: 6px 15px;
+    background-color: $color-primary;
+    border-radius: 9px;
+    cursor: pointer;
+    &:hover {
+        background-color: $color-primary-light;
+    }
+
+    @include media-mobile{
+        width: auto;
+        padding: 7px 15px;
+        margin: 0 10px;
+    }
+
+    .credit-card__img {
+        margin-right: 10px;
+        &:hover {
+            @include transform(scale(1.2));
+        }
+    }
+
+    .credit-card__number {
+        display: inline;
+        vertical-align: text-bottom;
+        &:hover {
+            color: $color-dark-3xl;
+        }
+
+        @include media-mobile{
+            @include font(15, 20);  
+            letter-spacing: 0.05em;
+        }
+    }
+}
+
+.donation__legal-information {
+    @include font(12, 18, italic, $Arial, 20px 0 0 0);
+    font-style: oblique;
+    margin: 20px 0 0 0;
+    text-align: start;
+    color: $color-dark-m;
+    @include media-mobile{
+        width: 280px;
+        text-align: justify;
+        margin: 20px auto 0;
+    }
+}
+
+.donation__link {
+    text-decoration: none;
+}
+
+/*Section Donation End*/
+
+/*Main End*/

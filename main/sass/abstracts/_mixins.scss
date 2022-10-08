@@ -1,0 +1,62 @@
+// Sass Mixins
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+@mixin flex($row-column: row, $align: center, $justify: center) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: $row-column;
+    align-items: $align;
+    justify-content: $justify;
+}
+@mixin grid-area($row: 1, $column: 1, $row-gap: 20px, $column-gap: 30px) {
+    display: grid;
+    grid-template-columns: repeat($column, 1fr);
+    grid-template-rows: repeat($row, 1fr);
+    grid-gap: $row-gap $column-gap;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+//Поменять на плэйсхолдер
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+//Поменять на плэйсхолдер
+@mixin wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@mixin wrapper-tablet($padding: 0, $width: $tablet-width) {
+    padding: $padding;
+    max-width: calc($width - $padding * 2);
+}
+
+@mixin font($size, $height: $size, $weight: normal, $font: $Georgia, $margin: 0, $padding: 0) {
+    margin: $margin;
+    padding: $padding;
+    font-family: $font;
+    font-size: $size * $fsize;
+    line-height: $height * $fsize;
+    font-weight: $weight;
+}
+
+@mixin media-tablet($width: $tablet-width) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin media-mobile($width: $mobile-width) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+

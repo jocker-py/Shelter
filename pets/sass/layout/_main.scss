@@ -1,0 +1,67 @@
+/*Main START*/
+
+.pets {
+    background-color: $color-light-l;
+    .wrapper {
+        @include wrapper;
+        padding: 81px 40px 100px 37px;
+        @include media-tablet {
+            @include wrapper-tablet(79px 30px 76px);
+        }
+
+        @include media-mobile(690px){
+            padding: 43px 10px 42px;
+        }
+    }
+}
+
+.pets__content {
+    &.pets__content--flex {
+        @include flex(column);
+        row-gap: 60px;
+        @include media-tablet {
+            row-gap: 30px;
+        }
+        @include media-mobile(690px){
+            row-gap: 42px;
+        }
+    }
+
+    .pets__heading {
+        margin: -1px 0 0 3px;
+        font-weight: 300;
+        @include media-tablet {
+            margin: 0 0 0 3px;
+        }
+        @include media-mobile(470px) {
+            @include font(25,32);
+            
+        }
+
+    }
+
+    
+}
+
+.pets__navigation {
+    &.pets__navigation--flex {
+        @include flex;
+        gap: 0 20px;
+        @include media-mobile(380px){
+            gap: 0 10px;
+        }
+    }
+}
+
+
+.slider {
+    &.slider--grid {
+        @include flex(row, stretch, stretch);
+        flex-wrap: nowrap;
+    }
+    
+}
+
+
+
+/*Main END*/

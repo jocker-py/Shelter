@@ -1,0 +1,29 @@
+/*Abstracts Start*/
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/placeholders";
+/*Abstracts End*/
+
+/*Base Start*/
+@import "base/normalize";
+@import "base/typoghraphy";
+@import "base/base";
+/*Base End*/
+
+/*Layout Start*/
+@import "layout/navigation";
+@import "layout/header";
+@import "layout/main";
+@import "layout/forms";
+@import "layout/footer";
+@import "layout/mobile-navigation";
+/*Layout End*/
+
+/*Components Start*/
+@import "components/slider";
+@import "components/buttons";
+@import "components/animation";
+@import "components/burger";
+@import 'components/popup';
+/*Components End*/

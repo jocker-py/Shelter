@@ -1,0 +1,137 @@
+/* Animation Start */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes burgerRotateOpen {
+    from {
+        @include transform(rotate(0deg));
+    }
+    50% {
+        @include transform(scale(0.5));
+    }
+    to {
+        @include transform(rotate(-90deg));
+    }
+}
+
+@keyframes burgerRotateClose {
+    from {
+        @include transform(rotate(-90deg));
+    }
+    50% {
+        @include transform(scale(0.5));
+    }
+    to {
+        @include transform(rotate(0deg));
+    }
+}
+
+@keyframes openMenuTransform {
+    from {
+        @include transform(translateX(320px));
+    }
+    50% {
+        @include transform(translateX(-15px));
+    }
+    to {
+        @include transform(translateX(0));
+    }
+}
+
+@keyframes closeMenuTransform {
+    from {
+        @include transform(translateX(0px));
+    }
+
+    to {
+        @include transform(translateX(320px));
+    }
+}
+
+@keyframes move-right {
+    from {
+        left: 0px;
+    }
+    to {
+        left: -990px;
+    }
+}
+
+@keyframes move-right-tablet {
+    from {
+        left: 0px;
+    }
+    to {
+        left: -580px;
+       
+    }
+}
+
+
+@keyframes move-right-mobile {
+    from {
+        left: 0px;
+    }
+    to {
+        left: -270px;
+       
+    }
+}
+
+.transition-right {
+    animation-name: move-right;
+    @include media-tablet{
+        animation-name: move-right-tablet;
+    }
+    @include media-mobile{
+        animation-name: move-right-mobile;
+    }
+    animation-duration: 1s;
+}
+
+@keyframes move-left {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 990px;
+    }
+}
+
+@keyframes move-left-tablet {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 580px;
+    }
+}
+
+@keyframes move-left-mobile {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 270px;
+       
+    }
+}
+
+.transition-left {
+    animation-name: move-left;
+    @include media-tablet{
+        animation-name: move-left-tablet;
+    }
+    @include media-mobile{
+        animation-name: move-left-mobile;
+    }
+    animation-duration: 1s;
+}
+/* Animation End */

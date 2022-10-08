@@ -1,0 +1,72 @@
+/*Navigation START*/
+
+.header__nav {
+    @include media-mobile{
+        display: none;
+    }
+}
+
+.header__list--flex-row-none {
+    list-style: none;
+    @include flex(row, center, space-around);
+    @include media-tablet {
+        padding-left: 0;
+        justify-content: space-between;
+    }
+    
+
+}
+
+.header__item {
+    margin-left: 35px;
+    font-size: 15 * $fsize;
+    line-height: 24 * $fsize;
+    letter-spacing: 0.007em;
+
+    
+        .header__link {
+            text-decoration: none;
+            color: $color-dark-s;
+            @include font(15, 24, $font: $Arial);
+
+            width: 0;
+            position: relative;
+
+            &:hover {
+                color: $color-light-s;
+            }
+
+            &::after {
+                display: block;
+                position: absolute;
+                left: 0;
+                width: 0;
+                height: 3px;
+                background-color: $color-primary; /*задаём цвет линии*/
+                content: "";
+                transition: width 0.4s ease-out;
+            }
+            &:hover::after,
+            &:focus::after {
+                width: 100%;
+            }
+        }
+        &.header__item--active {
+            border-bottom: 3px solid $color-primary;
+            .header__link {
+                color: $color-light-s;
+                &:hover,
+                &:focus,
+                &:hover::after,
+                &:focus::after {
+                    width: 0;
+                }
+            }
+        }
+    
+    @include media-mobile{
+        margin-left: 25px;
+    }
+}
+
+/*Navigation END*/

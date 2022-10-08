@@ -1,0 +1,56 @@
+/*Buttons Start*/
+
+button {
+    @include font(17, 22);
+    letter-spacing: 0.06em;
+    color: $color-dark-3xl;
+    border-radius: 100px;
+    width: 207px;
+    height: 52px;
+    @extend %transition;
+    border: 2px solid $color-primary;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    &:hover {
+        background-color: $color-primary-light;
+        border-color: $color-primary-light;
+        cursor: pointer;
+    }
+
+    
+}
+
+.button--primary {
+    background-color: $color-primary;
+}
+
+.button--secondary {
+    width: 187px;
+    background-color: $color-light-l;
+    border: 2px solid $color-primary;
+    
+}
+
+.button__arrow--left {
+    width: 52px;
+    height: 52px;
+    background-image: url("../assets/icons/left_arrow.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    @include media-mobile(420px){
+        order: 1;
+    }
+}
+
+.button__arrow--right {
+    background-color: $color-light-l;
+    width: 52px;
+    height: 52px;
+    background-image: url("../assets/icons/right_arrow.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    @include media-mobile(420px){
+        order: 2;
+    }
+}
+
+/*Buttons End*/

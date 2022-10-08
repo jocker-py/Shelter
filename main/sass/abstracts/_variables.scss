@@ -1,0 +1,40 @@
+// Sass Variables
+
+//Colors
+
+//primary
+$color-primary: hsl(25, 69%, 82%);
+$color-primary-light: hsl(25, 93%, 88%);
+
+//light
+$color-light-xl: hsl(0, 0%, 100%);
+$color-light-l: hsl(0, 0%, 96%);
+$color-light-s: hsl(0, 0%, 98%);
+
+//dark
+$color-black: hsla(0, 0%, 0%, 1);
+$color-dark-3xl: hsla(0, 0%, 16%, 1);
+$color-dark-2xl: hsla(0, 0%, 27%, 1);
+$color-dark-xl: hsla(0, 0%, 30%, 1);
+$color-dark-l: hsla(0, 0%, 33%, 1);
+$color-dark-m: hsla(0, 0%, 70%, 1);
+$color-dark-s: hsla(0, 0%, 80%, 1);
+
+//blackout
+$blackout: hsla(0, 0%, 16%, 0.6);
+
+
+//background
+$start-screen-gradient-background: url("../assets/images/noise_transparent@2x.png"),
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
+$footer-gradient-background: radial-gradient(hsl(25, 22, 29), hsl(330, 3, 13));
+
+// Sreens
+$laptop-width: 1280px;
+$tablet-width: 1290px;
+$mobile-width: 767px;
+
+// Fonts
+$Arial: "Arial", Helvetica, sans-serif;
+$Georgia: "Georgia", "Times New Roman", Times, serif;
+$fsize: 0.1rem;

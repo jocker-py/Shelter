@@ -1,0 +1,77 @@
+/*Images Start*/
+
+
+.help__icon {
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    @include media-mobile {
+        width: 50px;
+        height: 50px;
+    }
+
+    &.pet-food {
+        background-image: url("../assets/icons/help_section/pet-food.svg");
+        @include media-mobile {
+            background-image: url("../assets/icons/help_section/screen-320/pet-food-320.svg");
+        }
+    }
+
+    &.transportation {
+        background-image: url("../assets/icons/help_section/transportation.svg");
+        @include media-mobile {
+            background-image: url("../assets/icons/help_section/screen-320/transportation-320.svg");
+        }
+    }
+
+    &.toys {
+        background-image: url("../assets/icons/help_section/toys.svg");
+        @include media-mobile {
+            background-image: url("../assets/icons/help_section/screen-320/toys-320.svg");
+        }
+    }
+
+    &.bowls-and-cups{
+        background-image: url("../assets/icons/help_section/bowls-and-cups.svg");
+        @include media-mobile {
+            background-image: url("../assets/icons/help_section/screen-320/bowls-and-cups-320.svg");
+        }
+    }
+
+    &.shampoos{
+        background-image: url("../assets/icons/help_section/shampoos.svg");
+        @include media-mobile {
+            background-image: url("../assets/icons/help_section/screen-320/shampoos-320.svg");
+        }
+    }
+
+    &.vitamins {
+        background-image: url("../assets/icons/help_section/vitamins.svg");
+        @include media-mobile {
+            background-image: url("../assets/icons/help_section/screen-320/vitamins-320.svg");
+        }
+    }
+
+    &.medicines {
+        background-image: url("../assets/icons/help_section/medicines.svg");
+        @include media-mobile {
+            background-image: url("../assets/icons/help_section/screen-320/medicines-320.svg");
+        }
+    }
+
+    &.collars-leashes{
+        background-image: url("../assets/icons/help_section/collars-leashes.svg");
+        @include media-mobile {
+            background-image: url("../assets/icons/help_section/screen-320/collars-leashes-320.svg");
+        }
+    }
+
+    &.sleeping-areas{
+        background-image: url("../assets/icons/help_section/sleeping-area.svg");
+        @include media-mobile {
+            background-image: url("../assets/icons/help_section/screen-320/sleeping-area-320.svg");
+        }
+    }
+}
+
+/*Images End*/
